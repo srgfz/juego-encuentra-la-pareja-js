@@ -1,0 +1,101 @@
+:root {
+  --colortitle: rgb(6, 53, 196);
+  --colorsubtitle: rgb(237, 49, 162);
+}
+
+@font-face {
+  font-family: kido;
+  src: url("../assets/fonts/kido/Kido.ttf");
+}
+
+@font-face {
+  font-family: kidooutline;
+  src: url("../assets/fonts/kido/KidoOutline.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* cursor:pointer; */
+  cursor: url(../assets/iconos/star4.png), auto;
+}
+
+body {
+  background-image: url("../assets/images/fondo.jpg");
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  font-family: kidooutline;
+  color: var(--colortitle);
+  font-variant: small-caps;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(71, 235, 126, 0.288);  
+  position: relative;
+  margin:0;
+  padding:0;
+}
+
+.header__title {
+  font-size: 5rem;
+  margin: 1.5rem 0;
+  color: var(--colorsubtitle);
+  letter-spacing: 0.1rem;
+}
+
+.header__color1{
+  color:rgba(0, 191, 255, 0.904);
+}
+.header__color2{
+  color:rgba(253, 0, 0, 0.479);
+}
+.header__color3{
+  color:rgba(71, 248, 80, 0.925);
+}
+
+.data {
+  position: absolute;
+  right: 0;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.data__titlename {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--colorsubtitle);
+  transition: color 0.5s;
+}
+
+.data__titlename:hover {
+  color: var(--colortitle);
+
+}
+
+.data__img {
+  margin: 0;
+  height: 75px;
+  transition: transform 0.5s;
+}
+
+.data__img:hover {
+  transform: rotate(360deg)
+}
+
+/* ------------------------------------------------------ */
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos Infantiles DAW.....</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/configgame.css">
+    <link rel="stylesheet" href="./css/game.css">
+
+</head>
+
+
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <header class="header">
+            <h1 class="header__title">
+                <span class="header__color1">Busca</span>
+                <span class="header__color2"> las</span>
+                <span class="header__color3">Parejas</span>
+            </h1>
+            <div class="data displaynone" id="data">
+                <p class="data__titlename displaynone" id="data__titlename">Hola:
+                    <span class="data__name" id="data__name">
+                        <!-- Aquí cargamos el nombre del jugador seleccionado -->
+                    </span>
+                </p>
+                <!-- Aquí cambiamos la imagen por la imagen del avatar seleccionado y mostramos el contenido -->
+                <img class="data__img displaynone" id="data__img" src="./assets/images/estrella.png">
+            </div>
+        </header>
+
+        <!-- Selección de operadores -->
+        <section class="config" id="config">
+
+            <!-- Selección del nombre  -->
+            <section class="configname" id="configname">
+                <h2 class="configname__title">¿Cómo te llamas?</h2>
+                <select class="configname__select">
+                    <!-- Aquí cargarmos los options -->
+
+                    <!--  Esta es la estructura de un option
+                    <option class="configname__option" name="Pepito">
+                        Pepito
+                    </option> -->
+                </select>
+                <div class="configname__container">
+                    <input class="configname__input" id="configname__input" type="text"
+                        placeholder="Puedes escribir tu nombre">
+                    <button class="configname__button" id="configname__button">Añadir</button>
+                </div>
+            </section>
+
+            <!-- Selección de la imagen del avatar -->
+            <section class="configimage" id="configimage">
+                <h2 class="configimage__title">Elige un Avatar</h2>
+                <section class="configimage__containerimages">
+                    <!-- Aquí cargarmos las imagenes de los avatares -->
+
+                    <!-- Esta es la estructura de una imagen 
+                    <img class ="configimage__img"src="./assets/images/avatars/girl1.png">
+                    -->
+
+                </section>
+            </section>
+
+            <!-- Selección de la imagen para las parejas operadores o comidas-->
+            <section class="configgames">
+                <h2 class="configgames__title">¿Jugamos?</h2>
+                <div class="configgames__container" id="configgames__container">
+                    <section class="configgames__operations" id="configgames__operations">
+                        <!-- Aquí debes crear las imagenes de los operadores -->
+
+                        <!-- Esta es la estructura de las imágenes de los operadores  -->
+                        <!-- <img class="configgames__imgoperators" src="./assets/images/operators/suma.png"> -->
+                    </section>
+                    <section class="configgames__foods" id="configgames__foods">
+                        <!-- Aquí debes crear las imagenes de las comidas -->
+
+                        <!-- Esta es la estructura de las imágenes las comida-->
+                        <!--  <img class="configgames__imgfoods" src="./assets/images/foods/burger.png"> -->
+                    </section>
+                </div>
+            </section>
+        </section>
+
+        <!-- Capa del juego con las estrellas -->
+        <section class="game" id="game">
+            <section class="game__grid" id="game__grid">
+                <!-- Utilizar alt como indice del array de imagenes -->
+                <img class="game__img" src="./assets/images/estrella.png" alt="0">
+                <img class="game__img" src="./assets/images/estrella.png" alt="1">
+                <img class="game__img" src="./assets/images/estrella.png" alt="2">
+                <img class="game__img" src="./assets/images/estrella.png" alt="3">
+                <img class="game__img" src="./assets/images/estrella.png" alt="4">
+                <img class="game__img" src="./assets/images/estrella.png" alt="5">
+                <img class="game__img" src="./assets/images/estrella.png" alt="6">
+                <img class="game__img" src="./assets/images/estrella.png" alt="7">
+                <img class="game__img" src="./assets/images/estrella.png" alt="8">
+                <img class="game__img" src="./assets/images/estrella.png" alt="9">
+                <img class="game__img" src="./assets/images/estrella.png" alt="10">
+                <img class="game__img" src="./assets/images/estrella.png" alt="11">
+            </section>
+        </section>
+
+        <!-- Panel finalización Juego-->
+        <section class="finishgame" id="finishgame">
+            <p class="finishgame__text">
+                Felicidades!!!
+            </p>
+            <section class="finishgame__container">
+                <button class="finishgame__button" id="finishgame__button">
+                    Otra partida!!!
+                </button>
+
+            </section>
+
+        </section>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

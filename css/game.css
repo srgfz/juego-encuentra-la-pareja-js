@@ -1,0 +1,112 @@
+.game {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: rgba(235, 71, 71, 0.129);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+}
+
+.game__grid {
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  place-items: center;
+}
+
+.game__show {
+  animation-name: showgame;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showgame {
+  from {
+    opacity: 0;
+    top: -360px;
+    left: 1500px;
+  }
+
+  to {
+    top: -360px;
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+.game__initialimg {
+  background-color: rgba(235, 71, 71, 0.129);
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.game__img {
+  height: 100px;
+  width: 110px;
+  padding: 1rem;
+}
+
+/* Finalización del Juego */
+.finishgame {
+  position: relative;
+  top: -300px;
+  opacity: 0;
+  height: 200px;
+  background-color: rgba(235, 71, 71, 0.129);
+}
+
+.finishgame__text {
+  font-size: 4rem;
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+  color: var(--colorsubtitle);
+  font-weight: bold;
+}
+
+.finishgame__container {
+  display: flex;
+  justify-content: center;
+}
+
+.finishgame__button {
+  width: 900px;
+  background-color: rgba(0, 191, 255, 0.642);
+  border-radius: 0.5rem;
+  border: 0;
+  color: var(--colorsubtitle);
+  font-family: inherit;
+  font-size: 2.25rem;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+}
+.finishgame__button:hover {
+  background-color: var(--colorsubtitle);
+  color: rgba(238, 245, 247, 0.642);
+  cursor: url(../assets/iconos/star4.png), auto;
+}
+
+.finishgame__show {
+  animation-name: showfinishgame;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showfinishgame {
+  from {
+    opacity: 0;
+    top: -300px;
+    left: 1500px;
+  }
+
+  to {
+    top: -300px;
+    opacity: 1;
+    left: 0px;
+  }
+}

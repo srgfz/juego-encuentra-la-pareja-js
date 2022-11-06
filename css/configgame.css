@@ -1,0 +1,239 @@
+/* Configuración */
+.config {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+  background-color: rgba(235, 71, 71, 0.129);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.config__hide {
+  animation-name: hideconfig;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideconfig {
+  from {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+  to {
+    overflow: hidden;
+    opacity: 0;
+    left: -1500px;
+  }
+}
+
+/* Cajas para cada una de las configuraciones */
+.configgames,
+.configimage,
+.configname {
+  width: 375px;
+  height: 300px;
+  border-radius: 0.75rem;
+  margin: 0 0.25rem;
+}
+
+.configname {
+  position: relative;
+  background-color: rgba(250, 243, 39, 0.192);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.configerror {
+  animation-name: showerrorname;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+}
+
+@keyframes showerrorname {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  99% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.configimage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 0, 102, 0.153);
+}
+
+.configgames {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 191, 255, 0.392);
+}
+
+/* Configuración del nombre */
+
+.configname__select {
+  width: 225px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  border: 1px solid var(--colorsubtitle);
+  color: var(--colorsubtitle);
+  font-family: kidooutline;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.configname__title {
+  margin-bottom: 1rem;
+}
+
+.configname__option {
+  font-weight: bold;
+  background-color: rgba(250, 243, 39, 0.192);
+  border: none;
+}
+
+.configname__container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgba(250, 243, 39, 0.12);
+  
+}
+
+.configname__input {
+  height: 40px;
+  border-radius: 0.25rem;
+  border: 1px solid var(--colorsubtitle);
+  outline: none;
+  background-color: transparent;
+  color: green;
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+.configname__input::placeholder {
+  font-size: 1.9rem;
+  text-align: center;
+  color: var(--colorsubtitle);
+  text-align: center;
+  font-weight: bold;
+  font-family: kido;
+}
+
+.configname__input:focus {
+  color: rgb(250, 247, 148);
+  background-color: var(--colorsubtitle);
+  font-family: kido;
+}
+
+.configname__inputerror {
+  color: rgb(250, 247, 148);
+  background-color: rgba(237, 49, 162, 0.286);
+}
+
+.configname__button {
+  font-size: 1.9rem;
+  text-align: center;
+  color: var(--colorsubtitle);
+  text-align: center;
+  border-radius: 0.25rem;
+  border: 1px solid var(--colorsubtitle);
+  outline: none;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 0.25rem;
+  font-family: kido;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.configname__button:hover {
+  color: rgb(250, 247, 148);
+  background-color: var(--colorsubtitle);
+}
+
+
+/* ------------------------------------------------ */
+/* Imagenes */
+.configimage__containerimages {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.configimage__img {
+  width: 70px;
+  margin: 0 0.5rem 0.75rem 0;
+  transition: transform 0.3s;
+}
+
+.configimage__img:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+/* ------------------------------------------------ */
+/* Operadores */
+.configgames__title,
+.configimage__title,
+.configname__title {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--colorsubtitle);
+}
+
+.configgames__container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.configgames__operations, .configgames__foods {
+  width: 170px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgba(19, 121, 176, 0.151);
+  border-radius: 0.25rem;
+  transition: transform 0.3s;
+  margin-bottom: 1rem;
+}
+
+.configgames__operations:hover, .configgames__foods:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.configgames__imgoperators, .configgames__imgfoods {
+  width: 90%;
+  padding: 0.3rem;
+  display: block;
+}
+
+/* ------------------------------------------------ */
+/* Oculta capas */
+.displaynone {
+  display: none;
+}
